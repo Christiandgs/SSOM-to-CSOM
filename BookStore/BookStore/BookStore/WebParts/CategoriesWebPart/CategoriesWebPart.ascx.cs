@@ -5,6 +5,10 @@ using System.ComponentModel;
 using System.Web.UI.WebControls.WebParts;
 using BookStore.Model;
 using System.Web.UI.WebControls;
+using System.Net;
+using System.Web;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace BookStore.WebParts.CategoriesWebPart
 {
@@ -75,6 +79,34 @@ namespace BookStore.WebParts.CategoriesWebPart
 
             TxtSelectedCategory.Text = linkButton.Text;
             CategoryDetail.Visible = true;
+        }
+
+        protected void BookLinkBtn_Click(object sender, EventArgs e)
+        {
+            var linkButton = sender as LinkButton;
+            var bookTitle = linkButton.Text;
+
+            var client = new WebClient();
+            var json = client.DownloadString(string.Format("https://en.wikipedia.org/w/api.php?action=query&generator=search&format=json&gsrprop=snippet&prop=info&inprop=url&gsrsearch={0}", HttpUtility.UrlEncode(bookTitle)));
+            var result = JObject.Parse(json);
+            var pages = result["query"]["pages"];
+
+            var searchResults = new List<SearchResult>();
+
+            foreach(JProperty page in pages)
+            {
+                var searchResult = new SearchResult
+                {
+                    Title = page.Value["title"].ToString(),
+                    Url = page.Value["fullurl"].ToString()
+                };
+                searchResults.Add(searchResult);
+            }
+
+            RepeaterWikipediaResults.DataSource = searchResults;
+            RepeaterWikipediaResults.DataBind();
+
+            PanelWikipedia.Visible = true;
         }
     }
 }

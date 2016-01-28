@@ -55,6 +55,18 @@ namespace BookStore.WebParts.CategoriesWebPart {
             "artCodeGenerator", "12.0.0.0")]
         protected global::System.Web.UI.WebControls.Panel CategoryDetail;
         
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        protected global::System.Web.UI.WebControls.Label TxtSearch;
+        
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        protected global::System.Web.UI.WebControls.Repeater RepeaterWikipediaResults;
+        
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        protected global::System.Web.UI.WebControls.Panel PanelWikipedia;
+        
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebPartCodeGenerator", "12.0.0.0")]
         public static implicit operator global::System.Web.UI.TemplateControl(CategoriesWebPart target) 
         {
@@ -154,12 +166,15 @@ namespace BookStore.WebParts.CategoriesWebPart {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
-        private global::System.Web.UI.WebControls.Label @__BuildControl__control6() {
-            global::System.Web.UI.WebControls.Label @__ctrl;
-            @__ctrl = new global::System.Web.UI.WebControls.Label();
+        private global::System.Web.UI.WebControls.LinkButton @__BuildControl__control6() {
+            global::System.Web.UI.WebControls.LinkButton @__ctrl;
+            @__ctrl = new global::System.Web.UI.WebControls.LinkButton();
             @__ctrl.TemplateControl = this;
             @__ctrl.ApplyStyleSheetSkin(this.Page);
+            @__ctrl.ID = "BookLinkBtn";
             @__ctrl.DataBinding += new System.EventHandler(this.@__DataBinding__control6);
+            @__ctrl.Click -= new System.EventHandler(this.BookLinkBtn_Click);
+            @__ctrl.Click += new System.EventHandler(this.BookLinkBtn_Click);
             return @__ctrl;
         }
         
@@ -167,9 +182,9 @@ namespace BookStore.WebParts.CategoriesWebPart {
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
         public void @__DataBinding__control6(object sender, System.EventArgs e) {
-            System.Web.UI.WebControls.Label dataBindingExpressionBuilderTarget;
+            System.Web.UI.WebControls.LinkButton dataBindingExpressionBuilderTarget;
             System.Web.UI.WebControls.RepeaterItem Container;
-            dataBindingExpressionBuilderTarget = ((System.Web.UI.WebControls.Label)(sender));
+            dataBindingExpressionBuilderTarget = ((System.Web.UI.WebControls.LinkButton)(sender));
             Container = ((System.Web.UI.WebControls.RepeaterItem)(dataBindingExpressionBuilderTarget.BindingContainer));
             dataBindingExpressionBuilderTarget.Text = global::System.Convert.ToString( Eval("Title") , global::System.Globalization.CultureInfo.CurrentCulture);
         }
@@ -203,7 +218,7 @@ namespace BookStore.WebParts.CategoriesWebPart {
         private void @__BuildControl__control5(System.Web.UI.Control @__ctrl) {
             System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
             @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <li>\r\n                "));
-            global::System.Web.UI.WebControls.Label @__ctrl1;
+            global::System.Web.UI.WebControls.LinkButton @__ctrl1;
             @__ctrl1 = this.@__BuildControl__control6();
             @__parser.AddParsedSubObject(@__ctrl1);
             @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                "));
@@ -251,6 +266,92 @@ namespace BookStore.WebParts.CategoriesWebPart {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
+        private global::System.Web.UI.WebControls.Label @__BuildControlTxtSearch() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            this.TxtSearch = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            @__ctrl.ID = "TxtSearch";
+            @__ctrl.Font.Size = new System.Web.UI.WebControls.FontUnit(new System.Web.UI.WebControls.Unit(24D, global::System.Web.UI.WebControls.UnitType.Point));
+            @__ctrl.Text = "Wikipedia Results";
+            return @__ctrl;
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        private global::System.Web.UI.WebControls.HyperLink @__BuildControl__control9() {
+            global::System.Web.UI.WebControls.HyperLink @__ctrl;
+            @__ctrl = new global::System.Web.UI.WebControls.HyperLink();
+            @__ctrl.TemplateControl = this;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            @__ctrl.Target = "_blank";
+            @__ctrl.DataBinding += new System.EventHandler(this.@__DataBinding__control9);
+            return @__ctrl;
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        public void @__DataBinding__control9(object sender, System.EventArgs e) {
+            System.Web.UI.WebControls.HyperLink dataBindingExpressionBuilderTarget;
+            System.Web.UI.WebControls.RepeaterItem Container;
+            dataBindingExpressionBuilderTarget = ((System.Web.UI.WebControls.HyperLink)(sender));
+            Container = ((System.Web.UI.WebControls.RepeaterItem)(dataBindingExpressionBuilderTarget.BindingContainer));
+            dataBindingExpressionBuilderTarget.Text = global::System.Convert.ToString( Eval("Title") , global::System.Globalization.CultureInfo.CurrentCulture);
+            dataBindingExpressionBuilderTarget.NavigateUrl = global::System.Convert.ToString( Eval("Url") , global::System.Globalization.CultureInfo.CurrentCulture);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        private void @__BuildControl__control8(System.Web.UI.Control @__ctrl) {
+            System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <li>\r\n                "));
+            global::System.Web.UI.WebControls.HyperLink @__ctrl1;
+            @__ctrl1 = this.@__BuildControl__control9();
+            @__parser.AddParsedSubObject(@__ctrl1);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </li>\r\n        "));
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        private global::System.Web.UI.WebControls.Repeater @__BuildControlRepeaterWikipediaResults() {
+            global::System.Web.UI.WebControls.Repeater @__ctrl;
+            @__ctrl = new global::System.Web.UI.WebControls.Repeater();
+            this.RepeaterWikipediaResults = @__ctrl;
+            @__ctrl.ItemTemplate = new System.Web.UI.CompiledTemplateBuilder(new System.Web.UI.BuildTemplateMethod(this.@__BuildControl__control8));
+            @__ctrl.ID = "RepeaterWikipediaResults";
+            return @__ctrl;
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        private global::System.Web.UI.WebControls.Panel @__BuildControlPanelWikipedia() {
+            global::System.Web.UI.WebControls.Panel @__ctrl;
+            @__ctrl = new global::System.Web.UI.WebControls.Panel();
+            this.PanelWikipedia = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            @__ctrl.ID = "PanelWikipedia";
+            @__ctrl.Visible = false;
+            System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    "));
+            global::System.Web.UI.WebControls.Label @__ctrl1;
+            @__ctrl1 = this.@__BuildControlTxtSearch();
+            @__parser.AddParsedSubObject(@__ctrl1);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n    "));
+            global::System.Web.UI.WebControls.Repeater @__ctrl2;
+            @__ctrl2 = this.@__BuildControlRepeaterWikipediaResults();
+            @__parser.AddParsedSubObject(@__ctrl2);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n"));
+            return @__ctrl;
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
         private void @__BuildControlTree(global::BookStore.WebParts.CategoriesWebPart.CategoriesWebPart @__ctrl) {
             System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
             @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n<ul>\r\n\r\n    "));
@@ -261,6 +362,10 @@ namespace BookStore.WebParts.CategoriesWebPart {
             global::System.Web.UI.WebControls.Panel @__ctrl2;
             @__ctrl2 = this.@__BuildControlCategoryDetail();
             @__parser.AddParsedSubObject(@__ctrl2);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n"));
+            global::System.Web.UI.WebControls.Panel @__ctrl3;
+            @__ctrl3 = this.@__BuildControlPanelWikipedia();
+            @__parser.AddParsedSubObject(@__ctrl3);
         }
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +

@@ -26,8 +26,20 @@
     <asp:Repeater ID="RepeaterProducts" runat="server">
         <ItemTemplate>
             <li>
-                <asp:Label runat="server" text='<%# Eval("Title") %>' />
+                <asp:LinkButton runat="server" ID="BookLinkBtn" Text='<%# Eval("Title") %>' OnClick="BookLinkBtn_Click" />
                 <asp:Image runat="server" ImageUrl='<%# Eval("ImageUrl") %>' />
+            </li>
+        </ItemTemplate>
+    </asp:Repeater>
+</asp:Panel>
+
+<asp:Panel runat="server" ID="PanelWikipedia" Visible="False">
+    <asp:Label runat="server" ID="TxtSearch" Font-Size="24" Text="Wikipedia Results"></asp:Label>
+
+    <asp:Repeater ID="RepeaterWikipediaResults" runat="server">
+        <ItemTemplate>
+            <li>
+                <asp:HyperLink runat="server" text='<%# Eval("Title") %>' NavigateUrl='<%# Eval("Url") %>' Target="_blank" />
             </li>
         </ItemTemplate>
     </asp:Repeater>
