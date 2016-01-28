@@ -135,7 +135,7 @@ namespace BookStore.WebParts.CategoriesWebPart {
             global::System.Web.UI.WebControls.HiddenField @__ctrl2;
             @__ctrl2 = this.@__BuildControl__control4();
             @__parser.AddParsedSubObject(@__ctrl2);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </li>\r\n        "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(" \r\n            </li>\r\n        "));
         }
         
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -358,7 +358,7 @@ namespace BookStore.WebParts.CategoriesWebPart {
             global::System.Web.UI.WebControls.Repeater @__ctrl1;
             @__ctrl1 = this.@__BuildControlRepeaterCategories();
             @__parser.AddParsedSubObject(@__ctrl1);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n</ul>\r\n\r\n"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n</ul> \r\n\r\n"));
             global::System.Web.UI.WebControls.Panel @__ctrl2;
             @__ctrl2 = this.@__BuildControlCategoryDetail();
             @__parser.AddParsedSubObject(@__ctrl2);

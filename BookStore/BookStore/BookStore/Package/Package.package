@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="66d4f1e4-9c35-41f2-b80a-3942827f1d54" solutionId="66d4f1e4-9c35-41f2-b80a-3942827f1d54" resetWebServer="false" sharePointProductVersion="15.0" name="BookStore" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <assemblies>
-    <customAssembly location="Newtonsoft.Json.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\Newtonsoft.Json.dll" />
     <projectOutputAssembly location="BookStore.Data.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\BookStore.Data\BookStore.Data.csproj" />
     <projectOutputAssembly location="BookStore.Data.SharePoint.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\BookStore.Data.SharePoint\BookStore.Data.SharePoint.csproj" />
     <projectOutputAssembly location="BookStore.Application.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\BookStore.Application\BookStore.Application.csproj" />
+    <customAssembly location="Microsoft.Practices.Unity.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll" />
+    <customAssembly location="Newtonsoft.Json.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll" />
   </assemblies>
   <features>
     <featureReference itemId="2f3cda7b-9594-46f4-8868-f46bc751dce6" />

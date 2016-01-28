@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 
 namespace BookStore.Data.SharePoint.Repositories
 {
-    public class BooksRepository : IBooksRepository
+    public class SharePointBooksRepository : IBooksRepository
     {
+        private const string ListName = "Books";
+
         public List<Book> GetByCategory(int categoryId)
         {
             var web = SPContext.Current.Web;
-            var booksList = web.Lists["Books"];
+            var booksList = web.Lists[ListName];
 
             var query = new SPQuery();
             query.Query = string.Format(

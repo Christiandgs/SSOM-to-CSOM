@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using BookStore.Data.Repositories;
 using BookStore.Application.Services;
 using BookStore.Data.SharePoint.Repositories;
+using BookStore.Unity;
+using Microsoft.Practices.Unity;
 
 namespace BookStore.WebParts.CategoriesWebPart
 {
@@ -23,9 +25,9 @@ namespace BookStore.WebParts.CategoriesWebPart
 
         public CategoriesWebPart()
         {
-            _categoriesRepo = new CategoriesRepository();
-            _booksRepo = new BooksRepository();
-            _externalSearchService = new WikipediaService();
+            _categoriesRepo = WebPartUnityContainer.Current.Container.Resolve<ICategoriesRepository>();
+            _booksRepo = WebPartUnityContainer.Current.Container.Resolve<IBooksRepository>();
+            _externalSearchService = WebPartUnityContainer.Current.Container.Resolve<IExternalSearchService>();
         }
 
         protected override void OnInit(EventArgs e)

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BookStore.Data.SharePoint.Repositories
 {
-    public class CategoriesRepository : ICategoriesRepository
+    public class SharePointCategoriesRepository : ICategoriesRepository
     {
         private const string ListName = "Book Categories";
 

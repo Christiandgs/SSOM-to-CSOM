@@ -13,12 +13,12 @@
         <ItemTemplate>
             <li>
                 <asp:LinkButton runat="server" ID="CategoryLinkBtn" Text='<%# Eval("Title") %>' OnClick="CategoryLinkBtn_Click" />
-                <asp:HiddenField runat="server" ID="HiddenCategoryID" Value='<%# Eval("Id") %>' />
+                <asp:HiddenField runat="server" ID="HiddenCategoryID" Value='<%# Eval("Id") %>' /> 
             </li>
         </ItemTemplate>
     </asp:Repeater>
 
-</ul>
+</ul> 
 
 <asp:Panel runat="server" ID="CategoryDetail" Visible="False">
     <asp:Label runat="server" ID="TxtSelectedCategory" Font-Size="24"></asp:Label>
