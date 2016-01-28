@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="66d4f1e4-9c35-41f2-b80a-3942827f1d54" solutionId="66d4f1e4-9c35-41f2-b80a-3942827f1d54" resetWebServer="false" sharePointProductVersion="15.0" name="BookStore" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="2f3cda7b-9594-46f4-8868-f46bc751dce6" />
+    <featureReference itemId="c8604e84-b160-4055-81cb-52bd6f1ace02" />
+  </features>
+</package>

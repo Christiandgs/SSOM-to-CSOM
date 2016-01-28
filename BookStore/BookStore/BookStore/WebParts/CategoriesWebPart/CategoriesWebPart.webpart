@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="BookStore.WebParts.CategoriesWebPart.CategoriesWebPart, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Book Store Categories</property>
+        <property name="Description" type="string">Display all the categories of your book store and lets you select and see the product of each one</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
