@@ -62,9 +62,6 @@
     <Compile Include="Features\BookStore Lists\BookStore Lists.EventReceiver.cs">
       <DependentUpon>BookStore Lists.feature</DependentUpon>
     </Compile>
-    <Compile Include="Model\Book.cs" />
-    <Compile Include="Model\Category.cs" />
-    <Compile Include="Model\SearchResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebParts\CategoriesWebPart\CategoriesWebPart.ascx.cs">
       <DependentUpon>CategoriesWebPart.ascx</DependentUpon>
@@ -95,7 +92,20 @@
       <SharePointProjectItemId>{e131db65-a2b5-4afd-96fa-ab4bb8deb04c}</SharePointProjectItemId>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BookStore.Application\BookStore.Application.csproj">
+      <Project>{71bbd28b-d7e2-44e0-bb8d-670c7e632563}</Project>
+      <Name>BookStore.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookStore.Data.SharePoint\BookStore.Data.SharePoint.csproj">
+      <Project>{c842fef0-c615-409d-a023-9ec07c7c9d68}</Project>
+      <Name>BookStore.Data.SharePoint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookStore.Data\BookStore.Data.csproj">
+      <Project>{71062b82-6483-47fe-8e51-f2143f348be1}</Project>
+      <Name>BookStore.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Features\BookStore Webparts\BookStore Webparts.Template.xml">
       <DependentUpon>BookStore Webparts.feature</DependentUpon>
