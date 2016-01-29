@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Application", "Bo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Data.SharePoint", "BookStore.Data.SharePoint\BookStore.Data.SharePoint.csproj", "{C842FEF0-C615-409D-A023-9EC07C7C9D68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.App", "BookStore.App\BookStore.App.csproj", "{521A4E42-422E-46BE-B0F0-AE10FD97A8A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.AppWeb", "BookStore.AppWeb\BookStore.AppWeb.csproj", "{82730AC9-F8D8-496E-B80A-B57303A0B736}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,16 @@ Global
 		{C842FEF0-C615-409D-A023-9EC07C7C9D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C842FEF0-C615-409D-A023-9EC07C7C9D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C842FEF0-C615-409D-A023-9EC07C7C9D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521A4E42-422E-46BE-B0F0-AE10FD97A8A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{521A4E42-422E-46BE-B0F0-AE10FD97A8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{521A4E42-422E-46BE-B0F0-AE10FD97A8A4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{521A4E42-422E-46BE-B0F0-AE10FD97A8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{521A4E42-422E-46BE-B0F0-AE10FD97A8A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521A4E42-422E-46BE-B0F0-AE10FD97A8A4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{82730AC9-F8D8-496E-B80A-B57303A0B736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82730AC9-F8D8-496E-B80A-B57303A0B736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82730AC9-F8D8-496E-B80A-B57303A0B736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82730AC9-F8D8-496E-B80A-B57303A0B736}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
