@@ -80,6 +80,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unity\SharePointInstanceProvider.cs" />
+    <Compile Include="Unity\UnityWebPart.cs" />
     <Compile Include="Unity\WebPartUnityContainer.cs" />
     <Compile Include="WebParts\CategoriesWebPart\CategoriesWebPart.ascx.cs">
       <DependentUpon>CategoriesWebPart.ascx</DependentUpon>
@@ -144,4 +145,8 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(ProjectDir)\WebParts\CategoriesWebPart\*.ascx $(ProjectDir)\..\BookStore.AppWeb\WebParts\
+copy $(ProjectDir)\WebParts\CategoriesWebPart\*.ascx.cs $(ProjectDir)\..\BookStore.AppWeb\WebParts\</PostBuildEvent>
+  </PropertyGroup>
 </Project>

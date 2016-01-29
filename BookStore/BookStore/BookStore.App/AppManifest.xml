@@ -3,7 +3,7 @@
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="BookStoreApp"
      ProductID="{6b766cd2-5601-4237-999a-8be8be2ecc10}"
-     Version="1.0.0.1"
+     Version="1.0.0.2"
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>

@@ -9,31 +9,27 @@
 //------------------------------------------------------------------------------
 
 namespace BookStore.WebParts.CategoriesWebPart {
-    using System.Web.UI.WebControls.Expressions;
-    using System.Web.UI.HtmlControls;
-    using System.Collections;
-    using System.Text;
-    using System.Web.UI;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Xml.Linq;
-    using Microsoft.SharePoint.WebPartPages;
-    using System.Web.SessionState;
-    using System.Configuration;
-    using Microsoft.SharePoint;
-    using System.Web;
-    using System.Web.DynamicData;
-    using System.Web.Caching;
-    using System.Web.Profile;
-    using System.ComponentModel.DataAnnotations;
-    using System.Web.UI.WebControls;
     using System.Web.Security;
-    using System;
-    using Microsoft.SharePoint.Utilities;
+    using System.ComponentModel.DataAnnotations;
+    using System.Collections.Generic;
     using System.Text.RegularExpressions;
-    using System.Collections.Specialized;
+    using System.Web.UI.WebControls;
+    using System.Xml.Linq;
+    using System.Web.UI;
+    using System.Web.UI.HtmlControls;
+    using System.Web;
+    using System.Configuration;
+    using System;
+    using System.Text;
+    using System.Web.Profile;
+    using System.Web.Caching;
+    using System.Collections;
     using System.Web.UI.WebControls.WebParts;
-    using Microsoft.SharePoint.WebControls;
+    using System.Web.UI.WebControls.Expressions;
+    using System.Collections.Specialized;
+    using System.Web.SessionState;
+    using System.Web.DynamicData;
     using System.CodeDom.Compiler;
     
     
@@ -354,7 +350,7 @@ namespace BookStore.WebParts.CategoriesWebPart {
             "artCodeGenerator", "12.0.0.0")]
         private void @__BuildControlTree(global::BookStore.WebParts.CategoriesWebPart.CategoriesWebPart @__ctrl) {
             System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n<ul>\r\n\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n\r\n<ul>\r\n\r\n    "));
             global::System.Web.UI.WebControls.Repeater @__ctrl1;
             @__ctrl1 = this.@__BuildControlRepeaterCategories();
             @__parser.AddParsedSubObject(@__ctrl1);
