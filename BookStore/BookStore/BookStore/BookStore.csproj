@@ -91,6 +91,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CategoriesWebPart.ascx</DependentUpon>
     </Compile>
+    <Compile Include="WebParts\SearchWebPart\SearchWebPart.ascx.cs">
+      <DependentUpon>SearchWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\SearchWebPart\SearchWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchWebPart.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\BookStore Webparts\BookStore Webparts.feature">
@@ -110,6 +118,10 @@
     <None Include="WebParts\CategoriesWebPart\CategoriesWebPart.webpart" />
     <None Include="WebParts\CategoriesWebPart\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e131db65-a2b5-4afd-96fa-ab4bb8deb04c}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SearchWebPart\SearchWebPart.webpart" />
+    <None Include="WebParts\SearchWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5c706022-af74-4031-b547-2dcace5a9f13}</SharePointProjectItemId>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +150,11 @@
       <LastGenOutput>CategoriesWebPart.ascx.g.cs</LastGenOutput>
     </Content>
     <Content Include="WebParts\CategoriesWebPart\Elements.xml" />
+    <Content Include="WebParts\SearchWebPart\Elements.xml" />
+    <Content Include="WebParts\SearchWebPart\SearchWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>SearchWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -147,6 +164,8 @@
   <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup>
     <PostBuildEvent>copy $(ProjectDir)\WebParts\CategoriesWebPart\*.ascx $(ProjectDir)\..\BookStore.AppWeb\WebParts\
-copy $(ProjectDir)\WebParts\CategoriesWebPart\*.ascx.cs $(ProjectDir)\..\BookStore.AppWeb\WebParts\</PostBuildEvent>
+copy $(ProjectDir)\WebParts\CategoriesWebPart\*.ascx.cs $(ProjectDir)\..\BookStore.AppWeb\WebParts\
+copy $(ProjectDir)\WebParts\SearchWebPart\*.ascx $(ProjectDir)\..\BookStore.AppWeb\WebParts\
+copy $(ProjectDir)\WebParts\SearchWebPart\*.ascx.cs $(ProjectDir)\..\BookStore.AppWeb\WebParts\</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="BookStore.WebParts.SearchWebPart.SearchWebPart, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Book Store Search</property>
+        <property name="Description" type="string">Allows the user to search on the Book Store and displays also contents from Wikipedia.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

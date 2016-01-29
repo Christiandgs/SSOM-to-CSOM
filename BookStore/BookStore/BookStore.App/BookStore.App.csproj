@@ -49,6 +49,9 @@
     <Content Include="CategoriesClientWebPart\Elements.xml">
       <OpcRelationship>feature-elementmanifest</OpcRelationship>
     </Content>
+    <Content Include="SearchClientWebPart\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <AppManifestFile Include="AppManifest.xml">
@@ -70,6 +73,9 @@
     <None Include="app.config" />
     <None Include="CategoriesClientWebPart\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{49dcdb03-2e09-4b83-9488-17d879e4a352}</SharePointProjectItemId>
+    </None>
+    <None Include="SearchClientWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e09ebbf7-0820-46a4-8c1a-1f39f34b0a0e}</SharePointProjectItemId>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
